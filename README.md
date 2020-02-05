@@ -16,6 +16,8 @@ This repo contains XCombine, a Swift module, developed on top of the Combine fra
 - [Zip Operator](#zip-operator)
   - [General Structure](#general-structure)
   - [Example of Usage](#example-of-usage)
+- [ShareReplay Operator](#sharereplay-operator)
+  - [Example of Usage](#example-of-usage-sharereplay)
 - [License](#license)
 
 ## Installation
@@ -97,8 +99,46 @@ events.send("foo")
 events.send("bar")
 ```
 
+## ShareReplay Operator
+
+XCombine offers the `shareReplay` operator that is not yet present in the Combine framework. It returns a publisher that shares a single subscription to the upstream. It also buffers a given number of latest incoming stream values and immediately upon subscription replays them. XCombine's `shareReplay`  operator features:
+
+* autoconnect (reference counting) mechanism
+
+* a circular buffer for caching-related optimization
+
+* a fine grained back pressure handling
+
+### <a name="example-of-usage-sharereplay"></a>Example of Usage
+
+The following snippet is the updated example from the [blog post][combine-sharereplay-operator] on developing your own `shareReplay` operator. It demonstrates the use of XCombine's `shareReplay` operator.
+
+```swift
+import Combine
+import XCombine
+
+let measurements = PassthroughSubject<Int, Never>()
+
+let diagramDataSource = measurements
+    .share(replay: 3)
+
+let subscriber1 = diagramDataSource
+    .sink(
+        receiveCompletion: { completion in
+            print("Subscriber 1:", completion)
+        },
+        receiveValue: { temperature in
+            print("Subscriber 1:", temperature)
+        }
+    )
+
+measurements.send(100)
+measurements.send(110)
+```
+
 ## License
 
 This project is licensed under the MIT license.
 
 [combine-insight-into-zip-operator]: https://sergebouts.github.io/combine-insight-into-zip-operator/
+[combine-sharereplay-operator]: https://sergebouts.github.io/combine-sharereplay-operator/

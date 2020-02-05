@@ -24,4 +24,14 @@ extension XCombineNamespace {
     {
         return .init(upstream: self.upstream, other: other)
     }
+
+    /// Returns a publisher that **shares a single subscription to the upstream**, and immediately upon subscription replays values in buffer.
+    ///
+    /// - Parameter replay: Maximum element count of the replay buffer.
+    /// - Returns: A publisher that emits the elements produced by multicasting the upstream publisher.
+    public func share(replay: Int = 0)
+        -> XCombine.ShareReplay<Upstream>
+    {
+        return .init(upstream: self.upstream, capacity: replay)
+    }
 }
