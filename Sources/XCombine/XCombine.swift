@@ -34,4 +34,23 @@ extension XCombineNamespace {
     {
         return .init(upstream: self.upstream, capacity: replay)
     }
+
+    internal func upstreamCompletionObserver(
+        _ completer: XCombine.UpstreamGroupCompleter,
+        policy: XCombine.UpstreamCompletionPolicy
+    ) -> XCombine.UpstreamCompletionObserver<Upstream>
+    {
+        return .init(upstream: self.upstream,
+                     completer: completer,
+                     policy: policy)
+    }
+
+    /// Merges two publishers into one publisher by combining each element from self with the latest element from the second source, if any.
+    /// - Parameter other: Another publisher.
+    /// - Returns: A publisher that emits pairs of elements from the upstream publishers as tuples.
+    public func withLatestFrom<Other: Publisher>(_ other: Other)
+        -> XCombine.WithLatestFrom<Upstream, Other>
+    {
+        return .init(upstream: self.upstream, other: other)
+    }
 }

@@ -18,6 +18,8 @@ This repo contains XCombine, a Swift module, developed on top of the Combine fra
   - [Example of Usage](#example-of-usage)
 - [ShareReplay Operator](#sharereplay-operator)
   - [Example of Usage](#example-of-usage-sharereplay)
+- [WithLatestFrom Operator](#withlatestfrom-operator)
+  - [Example of Usage](#example-of-usage-withlatestfrom)
 - [License](#license)
 
 ## Installation
@@ -134,6 +136,44 @@ let subscriber1 = diagramDataSource
 
 measurements.send(100)
 measurements.send(110)
+```
+
+## WithLatestFrom Operator
+
+Another extension of the Combine framework that XCombine offers is the `withLatestFrom` operator which merges two publishers into one publisher by combining each element from self with the latest element from the second source. It returns a publisher that emits pairs of elements from the upstream publishers as tuples.
+
+### <a name="example-of-usage-withlatestfrom"></a>Example of Usage
+
+The following example demonstrates the use of the XCombine's `withLatestFrom` operator.
+
+```swift
+import Combine
+import XCombine
+
+let up1 = PassthroughSubject<Int, Never>()
+let up2 = PassthroughSubject<String, Never>()
+
+var subscriber = up1.x.withLatestFrom(up2)
+    .sink(
+        receiveCompletion: { completion in
+            print(completion)
+        },
+        receiveValue: { v1, v2 in
+            print(v1, v2)
+    })
+
+up1.send(1)
+up2.send("foo")
+up1.send(2)
+up1.send(3)
+up2.send("bar")
+up2.send("baz")
+up1.send(4)
+
+// The console output:
+// 2 foo
+// 3 foo
+// 4 baz
 ```
 
 ## License
