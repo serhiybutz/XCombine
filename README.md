@@ -176,9 +176,12 @@ up1.send(4)
 // 4 baz
 ```
 
+Also, there's a discussion on developing the `withLatestFrom` operator in this [blog post][combine-withlatestfrom-operator].
+
 ## License
 
 This project is licensed under the MIT license.
 
 [combine-insight-into-zip-operator]: https://sergebouts.github.io/combine-insight-into-zip-operator/
 [combine-sharereplay-operator]: https://sergebouts.github.io/combine-sharereplay-operator/
+[combine-withlatestfrom-operator]: https://sergebouts.github.io/combine-withlatestfrom-operator/
