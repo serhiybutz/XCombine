@@ -3,6 +3,7 @@
 ![Language](https://img.shields.io/badge/Swift-5.0-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS%20%7C%20tvOS-orange.svg)
 ![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-orange)
+![Swift](https://github.com/SergeBouts/XCombine/workflows/Swift/badge.svg)
 [<img src="https://img.shields.io/badge/licence-MIT-orange"  alt="License" />](https://github.com/SergeBouts/XCombine/blob/master/LICENSE)
 
 This repo contains XCombine, a Swift module, developed on top of the Combine framework to extend it and provide alternative implementations. The solutions were found while exploring Combine, and I believe could be interesting or useful to others as well.
