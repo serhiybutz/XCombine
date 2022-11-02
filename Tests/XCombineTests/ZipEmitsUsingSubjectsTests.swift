@@ -2,7 +2,7 @@
 //  ZipEmitsUsingSubjectsTests.swift
 //
 //
-//  Created by Serge Bouts.
+//  Created by Serhiy Butz.
 //
 
 

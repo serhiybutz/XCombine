@@ -2,7 +2,7 @@
 //  EventError.swift
 //  
 //
-//  Created by Serge Bouts.
+//  Created by Serhiy Butz.
 //
 
 enum EventError: Error, Equatable {

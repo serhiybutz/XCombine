@@ -2,7 +2,7 @@
 //  Misc.swift
 //
 //
-//  Created by Serge Bouts.
+//  Created by Serhiy Butz.
 //
 
 func twoCharacterString(by index: Int) -> String {

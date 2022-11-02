@@ -2,8 +2,8 @@
 //  XCombine+ZipUpstreamSubscriber.swift
 //  XCombine
 //
-//  Created by Serge Bouts on 12/3/2019.
-//  Copyright © 2019 Serge Bouts. All rights reserved.
+//  Created by Serhiy Butz on 12/3/2019.
+//  Copyright © 2019 Serhiy Butz. All rights reserved.
 //
 
 import Combine

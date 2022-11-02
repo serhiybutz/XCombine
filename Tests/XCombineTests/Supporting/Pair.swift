@@ -2,7 +2,7 @@
 //  Pair.swift
 //
 //
-//  Created by Serge Bouts.
+//  Created by Serhiy Butz.
 //
 
 struct Pair<F: Equatable, S: Equatable>: Equatable {

@@ -2,8 +2,8 @@
 //  XCombine+ShareReplaySubscription.swift
 //  XCombine
 //
-//  Created by Serge Bouts on 10/12/19.
-//  Copyright © 2019 Serge Bouts. All rights reserved.
+//  Created by Serhiy Butz on 10/12/19.
+//  Copyright © 2019 Serhiy Butz. All rights reserved.
 //
 
 import Foundation

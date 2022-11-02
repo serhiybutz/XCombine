@@ -2,7 +2,7 @@
 //  AtomicSync.swift
 //
 //
-//  Created by Serge Bouts.
+//  Created by Serhiy Butz.
 //
 
 import Foundation

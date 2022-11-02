@@ -3,9 +3,9 @@
 ![Language](https://img.shields.io/badge/Swift-5.0-orange.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS%20%7C%20tvOS-orange.svg)
 ![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-orange)
-![Swift](https://github.com/SergeBouts/XCombine/workflows/Swift/badge.svg)
-[![codecov](https://codecov.io/gh/SergeBouts/XCombine/branch/master/graph/badge.svg)](https://codecov.io/gh/SergeBouts/XCombine)
-[<img src="https://img.shields.io/badge/licence-MIT-orange"  alt="License" />](https://github.com/SergeBouts/XCombine/blob/master/LICENSE)
+![Swift](https://github.com/SerhiyButz/XCombine/workflows/Swift/badge.svg)
+[![codecov](https://codecov.io/gh/SerhiyButz/XCombine/branch/master/graph/badge.svg)](https://codecov.io/gh/SergeBouts/XCombine)
+[<img src="https://img.shields.io/badge/licence-MIT-orange"  alt="License" />](https://github.com/SerhiyButz/XCombine/blob/master/LICENSE)
 
 This repo contains XCombine, a Swift module, developed on top of the Combine framework to extend it and provide alternative implementations. The solutions were found while exploring Combine, and I believe could be interesting or useful to others as well.
 
@@ -31,7 +31,7 @@ This repo contains XCombine, a Swift module, developed on top of the Combine fra
 1. Go to "File" -> "Swift Packages" -> "Add Package Dependency"
 2. Paste XCombine's repository URL into the search field:
 
-`https://github.com/SergeBouts/XCombine.git`
+`https://github.com/SerhiyButz/XCombine.git`
 
 3. Click "Next"
 4. Ensure that the "Rules" field is set as this: "Branch: master"
@@ -184,6 +184,6 @@ Also, there's a discussion on developing the `withLatestFrom` operator in this [
 
 This project is licensed under the MIT license.
 
-[combine-insight-into-zip-operator]: https://sergebouts.github.io/combine-insight-into-zip-operator/
-[combine-sharereplay-operator]: https://sergebouts.github.io/combine-sharereplay-operator/
-[combine-withlatestfrom-operator]: https://sergebouts.github.io/combine-withlatestfrom-operator/
+[combine-insight-into-zip-operator]: https://serhiybutz.github.io/combine-insight-into-zip-operator/
+[combine-sharereplay-operator]: https://serhiybutz.github.io/combine-sharereplay-operator/
+[combine-withlatestfrom-operator]: https://serhiybutz.github.io/combine-withlatestfrom-operator/

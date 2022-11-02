@@ -2,7 +2,7 @@
 //  ShareReplayWithSequencesWithCapacityOf1.swift
 //
 //
-//  Created by Serge Bouts.
+//  Created by Serhiy Butz.
 //
 
 import XCTest
